@@ -8,13 +8,13 @@ using EntryPoints;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private string tag = "Player";
+
+    [SerializeField] private SpawnController spawnController;
+    [SerializeField] private UI ui;    
+    [SerializeField] private GameObject player;
+
     [SerializeField] private int maxFalls = 3;
     [SerializeField] private int maxPoints = 5;
-    [SerializeField] private SpawnController spawnController;
-    [SerializeField] private UI ui;
-
-    private GameObject player;  
 
     private Vector3 startPosition;
 
@@ -30,8 +30,6 @@ public class GameController : MonoBehaviour
         // foreach(EntryPoints.Point point in System.Enum.GetValues(typeof(EntryPoints.Point))) {
         //     Debug.Log("Found point" + point.ToString());
         // }
-
-        player = GameObject.FindWithTag(tag);
         if (player != null) {
 
             if ( spawnController != null)

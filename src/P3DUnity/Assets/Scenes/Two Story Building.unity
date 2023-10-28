@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2155.1672, g: 710.0851, b: 43.113712, a: 1}
+  m_IndirectSpecularColor: {r: 2173.5042, g: 722.3604, b: 44.914738, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5817,11 +5817,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce8197ec32a641eea0f3f052d8b8a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag: Player
-  maxFalls: 3
-  maxPoints: 5
   spawnController: {fileID: 456599852}
   ui: {fileID: 254760839}
+  player: {fileID: 1899006141}
+  maxFalls: 3
+  maxPoints: 5
 --- !u!4 &195020630
 Transform:
   m_ObjectHideFlags: 0
@@ -71516,6 +71516,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1899006141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+  m_PrefabInstance: {fileID: 556841634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899081518
 GameObject:
   m_ObjectHideFlags: 0
