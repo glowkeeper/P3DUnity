@@ -72,13 +72,13 @@ public class GameController : MonoBehaviour
         numFalls++;        
         if ( numFalls < maxFalls )
         {
-            Debug.Log("fall " + numFalls.ToString());
+            // Debug.Log("fall " + numFalls.ToString());
             ui.UpdateLives(maxFalls - numFalls);
             player.transform.position = startPosition;
 
         } else {
 
-            Debug.Log("Quitting as no lives left!");
+            // Debug.Log("Quitting as no lives left!");
             ui.UpdateLives(0);
             ui.HasFinished(false);
 
@@ -95,14 +95,14 @@ public class GameController : MonoBehaviour
         // Debug.Log("Game Controller Entry place " + place.ToString());
         if (!places.Contains(place)) 
         {
-            Debug.Log("New Entry place " + place.ToString());
+            // Debug.Log("New Entry place " + place.ToString());
 
             places[numPlaces] = place;
 
             numPlaces++;           
             if(numPlaces == maxPlaces) {
                 
-                Debug.Log("Game complete!");
+                // Debug.Log("Game complete!");
                 ui.UpdatePlaces(0);
                 ui.HasFinished(true);
 
