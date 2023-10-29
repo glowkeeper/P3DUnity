@@ -5817,9 +5817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce8197ec32a641eea0f3f052d8b8a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tag: Player
   spawnController: {fileID: 456599852}
   ui: {fileID: 254760839}
-  player: {fileID: 1899006141}
   maxFalls: 3
   maxPlaces: 5
 --- !u!4 &195020630
@@ -71518,11 +71518,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1899006141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
-  m_PrefabInstance: {fileID: 556841634}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899081518
 GameObject:
   m_ObjectHideFlags: 0
@@ -81069,36 +81064,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2747171922448251041, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
-      propertyPath: place
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2747171922448251041, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 195020629}
     - target: {fileID: 3221060132773171830, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
       propertyPath: m_Name
       value: Skateboard
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221060132773171830, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7227822583411515092, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7227822583411515092, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7227822583411515092, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
-      propertyPath: m_Center.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7871435555100367191, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
