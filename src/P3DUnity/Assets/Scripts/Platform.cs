@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using EntryPoints;
 
-public class Platform : MonoBehaviour
+public class Platform : EntryPoint
 {
-    [SerializeField] private GameController gameController;
-    [SerializeField] private string tag = "Player";
-
-    [SerializeField] private EntryPoints.Point point = EntryPoints.Point.PLATFORM;
-
     void Start()
     {
         if (gameController == null) {
      
             Debug.Log("Platform has no Game Controller");
+        } 
+
+        if (place == EntryPoints.Place.NONE) {
+     
+            Debug.Log("Platform has no Entry Point");
         } 
     }
 
@@ -23,7 +23,7 @@ public class Platform : MonoBehaviour
         // Debug.Log("in trigger enter", collider);
         if(collider.gameObject.tag == tag) {
             // Debug.Log("in platform tag trigger enter", collider);
-            gameController.HasEntered(point);
+            gameController.HasEntered(place);
             collider.transform.SetParent(transform);
         }
     }

@@ -5,10 +5,9 @@ using EntryPoints;
 
 public class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private string tag = "Player";
-
-    [SerializeField] private GameController gameController;
-    [SerializeField] private EntryPoints.Point point;
+    [SerializeField] protected string tag = "Player";
+    [SerializeField] protected GameController gameController;
+    [SerializeField] protected EntryPoints.Place place;
 
     void Start()
     {
@@ -17,9 +16,9 @@ public class EntryPoint : MonoBehaviour
             Debug.Log("Entry Point has no Game Controller");
         } 
 
-        if (point == EntryPoints.Point.NONE) {
+        if (place == EntryPoints.Place.NONE) {
      
-            Debug.Log("No Entry Point", gameObject);
+            Debug.Log("Entry Point has no Place");
         } 
     }
 
@@ -28,7 +27,7 @@ public class EntryPoint : MonoBehaviour
         // Debug.Log("in trigger enter point", collider);
         if(collider.gameObject.tag == tag) {
             // Debug.Log("in entry point tag trigger enter", collider);
-            gameController.HasEntered(point);
+            gameController.HasEntered(place);
         }
     }
 }

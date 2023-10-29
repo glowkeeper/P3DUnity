@@ -7,26 +7,18 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private TMP_Text timeUI;
     [SerializeField] private TMP_Text livesUI;
-
     [SerializeField] private TMP_Text placesUI;
 
     [SerializeField] private string timePreText = "Time: ";
-
     [SerializeField] private string livesPreText = "Lives: ";
-
     [SerializeField] private string placesPreText = "Places: ";
-
-
     [SerializeField] private string successText = "Success!: ";
-
     [SerializeField] private string failText = "Fail - Better Luck Next Time!";
 
     private float gameTime = 0;
-    // Start is called before the first frame update
-
     private const string timePostText = " secs";
-
     private bool isFinished = false;
+    
     void Start()
     {
         if (timeUI && livesUI && placesUI) 

@@ -14,22 +14,20 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject player;
 
     [SerializeField] private int maxFalls = 3;
-    [SerializeField] private int maxPoints = 5;
+    [SerializeField] private int maxPlaces = 5;
 
     private Vector3 startPosition;
 
     private int numFalls = 0;
-    private int numPoints = 0;
+    private int numPlaces = 0;
 
     private bool doSpawn = true;
 
-    private EntryPoints.Point[] points;
+    private EntryPoints.Place[] places;
 
     void Start()
-    {
-        // foreach(EntryPoints.Point point in System.Enum.GetValues(typeof(EntryPoints.Point))) {
-        //     Debug.Log("Found point" + point.ToString());
-        // }
+    {      
+
         if (player != null) {
 
             if ( spawnController != null)
@@ -37,9 +35,9 @@ public class GameController : MonoBehaviour
                 if ( ui != null)
                 {
                     startPosition = player.transform.position; 
-                    points = new EntryPoints.Point[maxPoints];
+                    places = new EntryPoints.Place[maxPlaces];
                     ui.UpdateLives(maxFalls);
-                    ui.UpdatePlaces(maxPoints);
+                    ui.UpdatePlaces(maxPlaces);
                 } else {
                      Debug.Log("No UI");
                 }
@@ -75,10 +73,13 @@ public class GameController : MonoBehaviour
             Debug.Log("fall " + numFalls.ToString());
             ui.UpdateLives(maxFalls - numFalls);
             player.transform.position = startPosition;
+
         } else {
-            Debug.Log("Quitting!");
+
+            Debug.Log("Quitting as no lives left!");
             ui.UpdateLives(0);
             ui.HasFinished(false);
+
             #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
             #else
@@ -87,19 +88,25 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void HasEntered(EntryPoints.Point point)
+    public void HasEntered(EntryPoints.Place place)
     {
-        // Debug.Log("Game Controller Entry point " + point.ToString());
-        if (!points.Contains(point)) 
+        // Debug.Log("Game Controller Entry place " + place.ToString());
+        if (!places.Contains(place)) 
         {
-            Debug.Log("New Entry point " + point.ToString());
-            points[numPoints] = point;
-            numPoints++;
-            ui.UpdatePlaces(maxPoints - numPoints);
-            if(numPoints == maxPoints) {
+            Debug.Log("New Entry place " + place.ToString());
+
+            places[numPlaces] = place;
+
+            numPlaces++;           
+            if(numPlaces == maxPlaces) {
+                
+                Debug.Log("Game complete!");
                 ui.UpdatePlaces(0);
                 ui.HasFinished(true);
-                Debug.Log("Game complete!");
+
+            } else {
+
+                ui.UpdatePlaces(maxPlaces - numPlaces); 
             }
         }
     }

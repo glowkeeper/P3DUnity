@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2173.5042, g: 722.3604, b: 44.914738, a: 1}
+  m_IndirectSpecularColor: {r: 2148.1145, g: 705.3868, b: 42.41578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4445,9 +4445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b2b6d18683a6bbda851709e1d51a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 195020629}
   tag: Player
-  point: 2
+  gameController: {fileID: 195020629}
+  place: 2
 --- !u!1 &143598024
 GameObject:
   m_ObjectHideFlags: 0
@@ -4486,7 +4486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Places
+  m_text: 'Places:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5643,6 +5643,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 130000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -5745,14 +5753,6 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!1 &193023611
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,7 +5821,7 @@ MonoBehaviour:
   ui: {fileID: 254760839}
   player: {fileID: 1899006141}
   maxFalls: 3
-  maxPoints: 5
+  maxPlaces: 5
 --- !u!4 &195020630
 Transform:
   m_ObjectHideFlags: 0
@@ -11063,7 +11063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lives
+  m_text: 'Lives:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14505,7 +14505,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdcef2f9e08e4062b2ae813a4eb1a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tag: Player
   gameController: {fileID: 195020629}
+  place: 0
 --- !u!1 &442498507
 GameObject:
   m_ObjectHideFlags: 0
@@ -28805,7 +28807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag: Player
   gameController: {fileID: 195020629}
-  point: 3
+  place: 3
 --- !u!65 &857519443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36702,7 +36704,6 @@ Transform:
   - {fileID: 1364857850}
   - {fileID: 1073584979}
   - {fileID: 1936413518}
-  - {fileID: 1112574886}
   - {fileID: 1525136447}
   - {fileID: 1118060421}
   m_Father: {fileID: 0}
@@ -37763,7 +37764,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 894809585}
-  m_Father: {fileID: 1053488028}
+  m_Father: {fileID: 2005152664}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1112655778
 GameObject:
@@ -39718,7 +39719,7 @@ GameObject:
   - component: {fileID: 1127245125}
   - component: {fileID: 1127245124}
   - component: {fileID: 1127245123}
-  - component: {fileID: 1127245122}
+  - component: {fileID: 1127245126}
   m_Layer: 0
   m_Name: ProjectorTrigger
   m_TagString: Untagged
@@ -39726,21 +39727,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1127245122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127245121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 706ad21d738944015a5e9e2e9c240d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tag: Player
-  gameController: {fileID: 195020629}
-  point: 5
 --- !u!65 &1127245123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39785,6 +39771,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2010166160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127245126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127245121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d8a48a89ab92a03a80d0a144d1b708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: Player
+  gameController: {fileID: 195020629}
+  place: 5
+  videoPlayer: {fileID: 1440900749}
 --- !u!43 &1133736174
 Mesh:
   m_ObjectHideFlags: 0
@@ -40254,7 +40256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tag: Player
   gameController: {fileID: 195020629}
-  point: 4
+  place: 4
 --- !u!1 &1188520935
 GameObject:
   m_ObjectHideFlags: 0
@@ -40300,6 +40302,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 27
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
@@ -40402,14 +40412,6 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1188520938
 Light:
   m_ObjectHideFlags: 0
@@ -49775,9 +49777,9 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
-  m_Looping: 1
+  m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -58879,7 +58881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time
+  m_text: 'Time:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -71566,6 +71568,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 21.46
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
@@ -71668,14 +71678,6 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1899081521
 Light:
   m_ObjectHideFlags: 0
@@ -73443,6 +73445,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 31.4
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
@@ -73545,14 +73555,6 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1978079932
 Light:
   m_ObjectHideFlags: 0
@@ -77851,6 +77853,7 @@ Transform:
   - {fileID: 1676033362}
   - {fileID: 702894485}
   - {fileID: 1134606530}
+  - {fileID: 1112574886}
   m_Father: {fileID: 1053488028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2010166159
@@ -81064,6 +81067,10 @@ PrefabInstance:
     - target: {fileID: 1059150070652796921, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747171922448251041, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
+      propertyPath: place
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2747171922448251041, guid: 85df437415d4c4162950b9ad74dfb7ff, type: 3}
       propertyPath: gameController

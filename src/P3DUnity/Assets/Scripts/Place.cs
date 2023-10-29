@@ -1,5 +1,5 @@
 namespace EntryPoints {
-    public enum Point {
+    public enum Place {
         
         NONE,
         SKATEBOARD,
