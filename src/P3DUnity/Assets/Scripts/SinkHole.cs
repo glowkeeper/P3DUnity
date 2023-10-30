@@ -6,7 +6,7 @@ public class SinkHole : EntryPoint
 {
     // Start is called before the first frame update
 
-     void Start()
+    void Start()
     {
         if (gameController == null) {
      

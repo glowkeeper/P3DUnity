@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
                     places = new EntryPoints.Place[maxPlaces];
                     ui.UpdateLives(maxFalls);
                     ui.UpdatePlaces(maxPlaces);
+                    
                 } else {
                      Debug.Log("No UI");
                 }
