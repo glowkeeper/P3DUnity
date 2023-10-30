@@ -8,7 +8,7 @@ using EntryPoints;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] protected string tag = "Player";
+    [SerializeField] private string tag = "Player";
     [SerializeField] private SpawnController spawnController;
     [SerializeField] private UI ui;  
 

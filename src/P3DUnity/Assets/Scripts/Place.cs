@@ -1,4 +1,4 @@
-namespace EntryPoints {
+namespace EntryPoints {    
     public enum Place {
         
         NONE,
