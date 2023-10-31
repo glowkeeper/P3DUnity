@@ -44,6 +44,7 @@ public class SpawnController : MonoBehaviour
             numThings++;
             return true;
         } else {
+            canSpawn = false;
             return false;
         }
     }
